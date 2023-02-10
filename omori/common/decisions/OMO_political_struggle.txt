@@ -1,0 +1,78 @@
+OMO_political_struggle_decis = {
+
+	OMO_add_power_kel = {
+		visible = { has_completed_focus = OMO_kel }
+		allowed = { has_completed_focus = OMO_kel }
+		cost = 10
+		complete_effect = {
+			add_to_variable = {
+				var = kel_political_power
+				value = 1
+			}
+		}
+		days_remove = 30
+		days_re_enable = 1
+	}
+	
+	OMO_add_power_basil = {
+		visible = { has_completed_focus = OMO_basil }
+		allowed = { has_completed_focus = OMO_basil }
+		cost = 10
+		complete_effect = {
+			add_to_variable = {
+				var = basil_political_power
+				value = 1
+			}
+		}
+		days_remove = 30
+		days_re_enable = 1
+	}
+	
+	OMO_basil_move = {
+		activation = {
+			has_completed_focus = OMO_kel
+			NOT = { has_completed_focus = OMO_kel_end }
+		}
+		
+		available = {
+			has_completed_focus = OMO_political_struggle_end_kel
+		}
+		
+		cancel_trigger = {
+			has_completed_focus = OMO_kel_end
+		}
+		
+		days_mission_timeout = 30
+		selectable_mission = no
+		timeout_effect = {
+			add_to_variable = {
+				var = basil_political_power
+				value = 1
+			}
+		}
+	}
+	
+	OMO_kel_move = {
+		activation = {
+			has_completed_focus = OMO_basil
+			NOT = { has_completed_focus = OMO_basil_end }
+		}
+		
+		available = {
+			has_completed_focus = OMO_political_struggle_end_basil
+		}
+		
+		cancel_trigger = {
+			has_completed_focus = OMO_basil_end
+		}
+	
+		days_mission_timeout = 40
+		selectable_mission = no
+		timeout_effect = {
+			add_to_variable = {
+				var = kel_political_power
+				value = 1
+			}
+		}
+	}
+}

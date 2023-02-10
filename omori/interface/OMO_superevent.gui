@@ -1,0 +1,370 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "OMO_superevent_california_civil_war"
+		size = { width = 580 height = 128 }
+		position = { x=0 y=-210 }
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = omori_se_gameover
+
+		instantTextBoxType = {
+			name = "Title"
+			position = { x = 0 y = 18 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "SE_CALIFORNIA_CW"
+			maxWidth = 580
+			maxHeight = 24
+			format = centre
+		}
+
+		iconType = {
+			name ="image"
+			spriteType = "GFX_superevent_california_civil_war"
+			position = { x= -286 y = -18 }
+			Orientation = center
+			alwaystransparent = yes
+		}
+
+	}
+
+	containerWindowType = {
+		name = "OMO_superevent_frame_california_civil_war"
+		size = { width = 588 height = 465 }
+		position = { x=0 y=0 }
+		Orientation = center
+		Origo = center
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_superevent_border"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "OMO_superevent_cw_text"
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 173 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+
+		iconType = {
+			name ="underlay"
+			spriteType = "GFX_superevent_text_underlay"
+			position = { x= 20 y = -200 }
+			Orientation = lower_left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "text"
+			position = {  x= 70 y = -195 }
+			font = "hoi_24header"
+			text = "SE_CALIFORNIA_CIVIL_WAR_D"
+			maxWidth = 490
+			maxHeight = 173
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+	}
+	containerWindowType = {
+		name = "OMO_superevent_basilwin"
+		size = { width = 580 height = 128 }
+		position = { x=0 y=-210 }
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = omori_se_basilwin
+
+		instantTextBoxType = {
+			name = "Title"
+			position = { x = 0 y = 18 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "SE_BASILWIN"
+			maxWidth = 580
+			maxHeight = 24
+			format = centre
+		}
+
+		iconType = {
+			name ="image"
+			spriteType = "GFX_superevent_basilwin"
+			position = { x= -286 y = -18 }
+			Orientation = center
+			alwaystransparent = yes
+		}
+
+	}
+
+	containerWindowType = {
+		name = "OMO_superevent_frame_basilwin"
+		size = { width = 588 height = 465 }
+		position = { x=0 y=0 }
+		Orientation = center
+		Origo = center
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_superevent_border"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "OMO_superevent_basilwin_text"
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 173 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+
+		iconType = {
+			name ="underlay"
+			spriteType = "GFX_superevent_text_underlay"
+			position = { x= 20 y = -205 }
+			Orientation = lower_left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "text"
+			position = {  x= 70 y = -195 }
+			font = "hoi_24header"
+			text = "SE_BASILWIN_D"
+			maxWidth = 490
+			maxHeight = 173
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+	}
+	containerWindowType = {
+		name = "OMO_superevent_kelwin"
+		size = { width = 580 height = 128 }
+		position = { x=0 y=-210 }
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = omori_se_gameover_piano
+
+		instantTextBoxType = {
+			name = "Title"
+			position = { x = 0 y = 18 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "SE_KELWIN"
+			maxWidth = 580
+			maxHeight = 24
+			format = centre
+		}
+
+		iconType = {
+			name ="image"
+			spriteType = "GFX_superevent_kelwin"
+			position = { x= -286 y = -18 }
+			Orientation = center
+			alwaystransparent = yes
+		}
+
+	}
+
+	containerWindowType = {
+		name = "OMO_superevent_frame_kelwin"
+		size = { width = 588 height = 465 }
+		position = { x=0 y=0 }
+		Orientation = center
+		Origo = center
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_superevent_border"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "OMO_superevent_kelwin_text"
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 173 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+
+		iconType = {
+			name ="underlay"
+			spriteType = "GFX_superevent_text_underlay"
+			position = { x= 20 y = -205 }
+			Orientation = lower_left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "text"
+			position = {  x= 70 y = -195 }
+			font = "hoi_24header"
+			text = "SE_KELWIN_D"
+			maxWidth = 490
+			maxHeight = 173
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+	}
+	
+	containerWindowType = {
+		name = "OMO_superevent_omori_marches_east"
+		size = { width = 580 height = 128 }
+		position = { x=0 y=-210 }
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = omori_se_omori_marches_east
+
+		instantTextBoxType = {
+			name = "Title"
+			position = { x = 0 y = 18 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "SE_OMORI_MARCHES_EAST"
+			maxWidth = 580
+			maxHeight = 24
+			format = centre
+		}
+
+		iconType = {
+			name ="image"
+			spriteType = "GFX_superevent_omori_marches_east"
+			position = { x= -286 y = -18 }
+			Orientation = center
+			alwaystransparent = yes
+		}
+
+	}
+	
+	containerWindowType = {
+		name = "OMO_superevent_frame_omori_marches_east"
+		size = { width = 588 height = 465 }
+		position = { x=0 y=0 }
+		Orientation = center
+		Origo = center
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_superevent_border"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "OMO_superevent_omori_marches_east_text"
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 173 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+
+		iconType = {
+			name ="underlay"
+			spriteType = "GFX_superevent_text_underlay"
+			position = { x= 20 y = -205 }
+			Orientation = lower_left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "text"
+			position = {  x= 70 y = -195 }
+			font = "hoi_24header"
+			text = "SE_OMORI_MARCHES_EAST_D"
+			maxWidth = 490
+			maxHeight = 173
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+	}
+	
+	containerWindowType = {
+		name = "OMO_superevent_isbboom"
+		size = { width = 580 height = 128 }
+		position = { x=0 y=-210 }
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = omori_se_isbboom
+
+		instantTextBoxType = {
+			name = "Title"
+			position = { x = 0 y = 18 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "SE_ISBBOOM"
+			maxWidth = 580
+			maxHeight = 24
+			format = centre
+		}
+
+		iconType = {
+			name ="image"
+			spriteType = "GFX_superevent_isbboom"
+			position = { x= -286 y = -18 }
+			Orientation = center
+			alwaystransparent = yes
+		}
+
+	}
+	
+	containerWindowType = {
+		name = "OMO_superevent_frame_isbboom"
+		size = { width = 588 height = 465 }
+		position = { x=0 y=0 }
+		Orientation = center
+		Origo = center
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_superevent_border"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "OMO_superevent_isbboom_text"
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 173 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+
+		iconType = {
+			name ="underlay"
+			spriteType = "GFX_superevent_text_underlay"
+			position = { x= 20 y = -205 }
+			Orientation = lower_left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "text"
+			position = {  x= 70 y = -195 }
+			font = "hoi_24header"
+			text = "SE_ISBBOOM_D"
+			maxWidth = 490
+			maxHeight = 173
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+	}
+}

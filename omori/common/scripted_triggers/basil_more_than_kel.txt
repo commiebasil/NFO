@@ -1,0 +1,5 @@
+basil_more_than_kel = {
+	check_variable = {
+		basil_political_power > kel_political_power
+	}
+}

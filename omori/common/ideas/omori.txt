@@ -1,0 +1,94 @@
+ideas = {
+    country = {
+        OMO_idea_chaos = {
+			modifier = {
+				production_speed_buildings_factor = -0.5
+			}
+			on_add = {
+				country_lock_all_division_template = yes
+			}
+			on_remove = {
+				country_lock_all_division_template = no
+			}
+        }
+		
+		OMO_idea_los_angeles_labor_camps = {
+			picture = OMO_los_angeles_labor_camps
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		
+		OMO_idea_worker_soviets = {
+			picture = OMO_worker_soviets
+			modifier = {
+				communism_drift = 0.1
+			}
+		}
+		
+		OMO_idea_watermelon = {
+			picture = OMO_watermelon
+			modifier = {
+				stability_factor = 0.1
+				weekly_manpower = 250
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		OMO_idea_rebellion = {
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.2
+			}
+		}
+		
+		OMO_idea_cheap_fighters = {
+			picture = OMO_cheap_fighters
+			equipment_bonus = {
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		
+		OMO_idea_basketball = {
+			picture = OMO_basketball
+			modifier = {
+				stability_factor = 0.05
+				mobilization_speed = 0.1
+				army_speed_factor = 0.1
+			}
+		}
+		
+		OMO_idea_army_of_terror = {
+			picture = OMO_army_of_terror
+			modifier = {
+				compliance_growth = 0.1
+				required_garrison_factor = 0.1
+				resistance_growth = -0.1
+			}
+		}
+    }
+	
+	industrial_concern = {
+		krupp_omori = {
+			allowed = { original_tag = OMO }
+			available = { has_completed_focus = OMO_german_specialists }
+			visible = { has_completed_focus = OMO_german_specialists }
+			
+			research_bonus = {
+				industry = 0.1
+				artillery = 0.05
+			}
+			
+			traits = { german_friends }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+}

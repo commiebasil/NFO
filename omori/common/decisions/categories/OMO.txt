@@ -1,0 +1,23 @@
+OMO_political_struggle_decis = {
+	allowed = {
+		tag = OMO
+	}
+	
+	available = {
+		has_completed_focus = OMO_political_stab
+		NOT = { has_completed_focus = OMO_basil_end }
+		NOT = { has_completed_focus = OMO_kel_end }
+	}
+	
+	visible = {
+		has_completed_focus = OMO_political_stab
+		NOT = { has_completed_focus = OMO_basil_end }
+		NOT = { has_completed_focus = OMO_kel_end }
+	}
+	
+	visible_when_empty = yes
+	
+	scripted_gui = OMO_political_struggle_gui
+	
+	priority = 100
+}

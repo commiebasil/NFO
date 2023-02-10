@@ -1,0 +1,122 @@
+scripted_gui = {
+
+	OMO_superevent_california_civil_war = {
+		context_type = player_context
+		window_name = "OMO_superevent_california_civil_war"
+
+		visible = {
+			has_global_flag = superevent_california_civil_war
+		}
+	}
+
+	OMO_superevent_frame_california_civil_war = {
+		context_type = player_context
+		window_name = "OMO_superevent_frame_california_civil_war"
+
+		visible = {
+			has_global_flag = superevent_california_civil_war
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = superevent_california_civil_war
+			}
+		}
+	}
+	
+	OMO_superevent_basilwin = {
+		context_type = player_context
+		window_name = "OMO_superevent_basilwin"
+
+		visible = {
+			has_global_flag = superevent_basilwin
+		}
+	}
+
+	OMO_superevent_frame_basilwin = {
+		context_type = player_context
+		window_name = "OMO_superevent_frame_basilwin"
+
+		visible = {
+			has_global_flag = superevent_basilwin
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = superevent_basilwin
+			}
+		}
+	}
+	
+	OMO_superevent_kelwin = {
+		context_type = player_context
+		window_name = "OMO_superevent_kelwin"
+
+		visible = {
+			has_global_flag = superevent_kelwin
+		}
+	}
+
+	OMO_superevent_frame_kelwin = {
+		context_type = player_context
+		window_name = "OMO_superevent_frame_kelwin"
+
+		visible = {
+			has_global_flag = superevent_kelwin
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = superevent_kelwin
+			}
+		}
+	}
+	
+	OMO_superevent_omori_marches_east = {
+		context_type = player_context
+		window_name = "OMO_superevent_omori_marches_east"
+
+		visible = {
+			has_global_flag = superevent_omori_marches_east
+		}
+	}
+	
+	OMO_superevent_frame_omori_marches_east = {
+		context_type = player_context
+		window_name = "OMO_superevent_frame_omori_marches_east"
+
+		visible = {
+			has_global_flag = superevent_omori_marches_east
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = superevent_omori_marches_east
+			}
+		}
+	}
+	
+	OMO_superevent_isbboom = {
+		context_type = player_context
+		window_name = "OMO_superevent_isbboom"
+
+		visible = {
+			has_global_flag = superevent_isbboom
+		}
+	}
+	
+	OMO_superevent_frame_isbboom = {
+		context_type = player_context
+		window_name = "OMO_superevent_frame_isbboom"
+
+		visible = {
+			has_global_flag = superevent_isbboom
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = superevent_isbboom
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	frameAnimatedSpriteType = {
+        name = "GFX_frontend_bg_01"
+        texturefile = "gfx/animated_shit/omori_bg.dds"
+        noOfFrames = 2
+        animation_rate_fps = 1
+        looping = yes
+        play_on_show = yes
+        pause_on_loop = 0.0
+        alwaystransparent = no
+        #effectFile = "gfx/FX/buttonstate_blendframes.lua"
+    }
+
+}

@@ -1,0 +1,30 @@
+spriteTypes = {
+    progressbartype = {
+        name = "GFX_prepare_to_war_with_USA_progressbar"
+        textureFile1 = "gfx/interface/decisions/GFX_OMO_prepare_to_war_with_USA_progressbar_full.dds"
+        textureFile2 = "gfx/interface/decisions/GFX_OMO_prepare_to_war_with_USA_progressbar_empty.dds"
+        size = { 
+            x = 496
+            y = 36
+        }
+        horizontal = yes
+		effectFile = "gfx/FX/progress.lua"
+    }
+	
+	frameAnimatedSpriteType = {
+			name = "GFX_OMO_prepare_to_war_with_USA_header"
+			texturefile = "gfx/interface/decisions/GFX_OMO_prepare_to_war_with_USA_header.dds"
+			noOfFrames = 3
+			loadType = "INGAME"
+			transparencecheck = no
+			animation_rate_fps = 10
+			looping = yes
+			play_on_show = yes
+			pause_on_loop = 0.0
+	}
+	
+	spriteType = {
+		name = "GFX_OMO_prepare_to_war_with_USA_pointer"
+		texturefile = "gfx/interface/decisions/GFX_OMO_prepare_to_war_with_USA_pointer.dds"
+	}
+}

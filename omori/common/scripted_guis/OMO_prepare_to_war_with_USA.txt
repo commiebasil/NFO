@@ -1,0 +1,16 @@
+scripted_gui = {
+    OMO_prepare_to_war_with_USA_gui = {
+        window_name = "OMO_prepare_to_war_with_USA_container"
+        context_type = decision_category
+         
+        visible = {
+          tag = OMO  
+        }
+        
+        properties = {
+			progressbar = {
+				frame = OMO_war_with_USA_readiness_var
+			}
+		}
+    }
+}

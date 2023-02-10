@@ -1,0 +1,64 @@
+spriteTypes = {
+	frameAnimatedSpriteType = {
+			name = "GFX_portrait_OMO_kel"
+			texturefile = "gfx/leaders/OMO/portrait_OMO_kel.dds"
+			noOfFrames = 3
+			loadType = "INGAME"
+			transparencecheck = no
+			animation_rate_fps = 2
+			looping = yes
+			play_on_show = yes
+			pause_on_loop = 0.0
+		}
+		
+	frameAnimatedSpriteType = {
+			name = "GFX_OMO_sir_maximus"
+			texturefile = "gfx/characters/OMO_sir_maximus.dds"
+			noOfFrames = 4
+			loadType = "INGAME"
+			transparencecheck = no
+			animation_rate_fps = 2
+			looping = yes
+			play_on_show = yes
+			pause_on_loop = 0.0
+		}
+
+	frameAnimatedSpriteType = {
+			name = "GFX_OMO_omori"
+			texturefile = "gfx/characters/OMO_omori.dds"
+			noOfFrames = 3
+			loadType = "INGAME"
+			transparencecheck = no
+			animation_rate_fps = 2
+			looping = yes
+			play_on_show = yes
+			pause_on_loop = 0.0
+		}
+		
+	frameAnimatedSpriteType = {
+			name = "GFX_OMO_capt_spaceboy"
+			texturefile = "gfx/characters/OMO_capt_spaceboy.dds"
+			noOfFrames = 4
+			loadType = "INGAME"
+			transparencecheck = no
+			animation_rate_fps = 2
+			looping = yes
+			play_on_show = yes
+			pause_on_loop = 0.0
+		}
+	
+	spriteType = {
+		name = "GFX_OMO_Alexander_Novikov"
+		texturefile = "gfx/characters/OMO_Alexander_Novikov.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_OMO_Jim_Annler"
+		texturefile = "gfx/characters/OMO_Jim_Kennler.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_OMO_Stanley"
+		texturefile = "gfx/characters/OMO_Stanley.dds"
+	}
+}

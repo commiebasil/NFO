@@ -1,0 +1,102 @@
+spriteTypes = {
+
+	spriteType = {
+		name = GFX_idea_OMO_jawsum
+		texturefile = gfx/interface/ideas/OMO_jawsum_pic.dds
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_pluto
+		texturefile = gfx/interface/ideas/OMO_pluto_pic.dds
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_hero
+		texturefile = gfx/interface/ideas/OMO_hero_pic.dds
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_worker_soviets
+		texturefile = gfx/interface/ideas/OMO_idea_worker_soviets.dds
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_omori
+		texturefile = gfx/interface/ideas/OMO_omori_pic.dds
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_watermelon
+		texturefile = gfx/interface/ideas/OMO_idea_watermelon.dds
+	}
+	
+	spriteType = {
+		name = GFX_idea_CAL_split
+		texturefile = gfx/interface/ideas/CAL_idea_split.dds
+	}
+	
+	spriteType = {
+		name = "GFX_idea_krupp_omori"
+		texturefile = gfx/interface/ideas/idea_krupp_omori.dds
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_sir_maximus
+		texturefile = "gfx/interface/ideas/OMO_sir_maximus_pic.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_los_angeles_labor_camps
+		texturefile = "gfx/interface/ideas/OMO_idea_los_angeles_labor_camps.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_basketball
+		texturefile = "gfx/interface/ideas/OMO_idea_basketball.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_cheap_fighters
+		texturefile = "gfx/interface/ideas/OMO_idea_cheap_fighters.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_burgerwehr
+		texturefile = "gfx/interface/ideas/OMO_idea_burgerwehr.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_slaves
+		texturefile = "gfx/interface/ideas/OMO_idea_slaves.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_Alexander_Novikov
+		texturefile = "gfx/interface/ideas/OMO_Alexander_Novikov_pic.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_Jim_Annler
+		texturefile = "gfx/interface/ideas/OMO_Jim_Annler_pic.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_Stanley
+		texturefile = "gfx/interface/ideas/OMO_Stanley_pic.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_necoarc
+		texturefile = "gfx/interface/ideas/OMO_necoarc_pic.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_army_of_terror
+		texturefile = "gfx/interface/ideas/OMO_idea_army_of_terror.dds"
+	}
+	
+	spriteType = {
+		name = GFX_idea_OMO_bonus_slaves
+		texturefile = "gfx/interface/ideas/OMO_idea_bonus_slaves.dds"
+	}
+}

@@ -1,0 +1,23 @@
+OMO_prepare_to_war_with_USA_decis = {
+	allowed = {
+		tag = OMO
+	}
+	
+	available = {
+		has_completed_focus = OMO_march_on_east
+		NOT = { has_country_flag = OMO_prepare_war_mechanic_ended }
+	}
+	
+	visible = {
+		has_completed_focus = OMO_march_on_east
+		NOT = { has_country_flag = OMO_prepare_war_mechanic_ended }
+	}
+	
+	visible_when_empty = yes
+	
+	scripted_gui = OMO_prepare_to_war_with_USA_gui
+	
+	icon = GFX_decision_category_military_operation
+	
+	priority = 110
+}

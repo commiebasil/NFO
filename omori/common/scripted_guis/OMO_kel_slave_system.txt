@@ -1,0 +1,16 @@
+scripted_gui = {
+    OMO_kel_slave_system_gui = {
+        window_name = "OMO_kel_slave_system_container"
+        context_type = decision_category
+         
+        visible = {
+          tag = OMO  
+        }
+        
+        properties = {
+            OMO_kel_slave_system_t = {
+                frame = OMO_kel_slave_system_t
+            }
+        }
+    }
+}

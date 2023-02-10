@@ -1,0 +1,22 @@
+state={
+	id=912
+	name="STATE_912"
+	state_category=wasteland
+	provinces={
+		13257 13258 13259 13260 13261 13262 13263 13264 13265 13266 13267 13268 13269
+	}
+	
+	history={
+		victory_points = {
+			13262 5
+		}
+		owner = WBR
+		add_core_of = WBR
+		add_core_of = USA
+		set_demilitarized_zone = yes
+	}
+	
+	manpower=56314
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

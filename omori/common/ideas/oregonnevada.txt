@@ -1,0 +1,9 @@
+ideas = {
+    country = {
+        ORENEV_idea_dontplayhere = {
+			picture = anti_soviet_pact
+			modifier = {
+				consumer_goods_factor = 1.0
+        }
+	}
+}

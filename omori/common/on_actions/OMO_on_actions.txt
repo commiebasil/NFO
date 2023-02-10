@@ -1,0 +1,17 @@
+on_actions = {
+	on_daily_OMO = {
+		effect = {
+			set_variable = {
+					OMO_rebel_chance = 1.0
+			}
+			subtract_from_variable = {
+				var = OMO_rebel_chance
+				value = stability
+			}
+			multiply_variable = {
+				var = OMO_rebel_chance
+				value = 100
+			}
+		}
+	}
+}

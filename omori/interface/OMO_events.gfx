@@ -1,0 +1,41 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_OMO_event_plutocapture
+		texturefile = gfx/interface/events/OMO_event_plutocapture.dds
+	}
+	
+	spriteType = {
+		name = GFX_OMO_event_camp
+		texturefile = gfx/interface/events/OMO_event_camp.dds
+	}
+	
+	spriteType = {
+		name = GFX_OMO_event_meeting
+		texturefile = gfx/interface/events/OMO_event_meeting.dds
+	}
+	
+	spriteType = {
+		name = GFX_OMO_event_end
+		texturefile = gfx/interface/events/OMO_event_end.dds
+	}
+	
+	spriteType = {
+		name = GFX_OMO_event_mari
+		texturefile = gfx/interface/events/OMO_event_mari.dds
+	}
+	
+	spriteType = {
+		name = GFX_OMO_event_kelwin
+		texturefile = gfx/interface/events/OMO_event_kelwin.dds
+	}
+	
+	spriteType = {
+		name = OMO_event_endoftheway
+		texturefile = gfx/interface/events/OMO_event_endoftheway.dds
+	}
+	
+	spriteType = {
+		name = OMO_event_isbboom
+		texturefile = gfx/interface/events/OMO_event_isbboom.dds
+	}
+}

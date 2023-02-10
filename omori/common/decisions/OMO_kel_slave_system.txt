@@ -1,0 +1,285 @@
+OMO_kel_slave_system_decis = {
+	OMO_slaves_mobilization = {
+		visible = { 
+			NOT = { has_idea = OMO_idea_rebellion }
+			has_completed_focus = OMO_slave_based_economy
+			has_government = burgsys
+		}
+		allowed = { 
+			original_tag = OMO
+		}
+		available = {
+			has_completed_focus = OMO_slave_based_economy
+			hidden_trigger = { NOT = { has_idea = OMO_idea_rebellion } }
+			NOT = { has_decision = OMO_slaves_demobilization }
+			has_government = burgsys
+			check_variable = {
+				slaves_amount < slaves_amount_max
+			}
+		}
+		cost = 100
+		complete_effect = {
+			add_to_variable = {
+				var = slaves_amount
+				value = 5000
+			}
+			add_to_variable = {
+				var = var_slaves_cg
+				value = -0.02
+			}
+			add_to_variable = {
+				var = var_slaves_cc
+				value = -0.025
+			}
+			add_to_variable = {
+				var = var_slaves_if
+				value = 0.025
+			}
+			add_to_variable = {
+				var = var_slaves_ps
+				value = 0.025
+			}
+			add_to_variable = {
+				var = var_slaves_sf
+				value = -0.025
+			}
+		}
+		days_remove = 60
+		days_re_enable = 1
+	}
+	
+	OMO_destroy_rebellions = {
+		visible = { 
+			has_idea = OMO_idea_rebellion
+		}
+		allowed = { 
+			original_tag = OMO
+		}
+		available = {
+			has_idea = OMO_idea_rebellion
+		}
+		cost = 100
+		remove_effect = {
+			random = {
+				chance = 80
+				country_event = OMO_event.8
+			}
+			random = {
+				chance = 20
+				country_event = OMO_event.9
+			}
+		}
+		days_remove = 60
+		days_re_enable = 1
+	}
+	
+	OMO_slave_revolt = {
+		activation = {
+				check_variable = {
+					slaves_amount > 0
+				}
+				hidden_trigger = { NOT = { has_idea = OMO_idea_rebellion } }
+				has_completed_focus = OMO_slave_based_economy
+		}
+		
+		available = {
+			NOT = {
+				check_variable = {
+					slaves_amount > 0
+				}
+			}
+		}
+		
+		cancel_trigger = {
+			check_variable = {
+				slaves_amount < 5000
+			}
+			hidden_trigger = { has_idea = OMO_idea_rebellion }
+		}
+		
+		days_mission_timeout = 210
+		selectable_mission = no
+		timeout_effect = {
+			if = {
+				limit = { has_stability < 0.01 }
+				country_event = OMO_event.7
+			}
+			else = {
+				random = {
+					chance = OMO_rebel_chance
+					country_event = OMO_event.7
+				}
+			}
+		}
+	}
+	
+	OMO_steal_slaves_mexico = {
+		allowed = { original_tag = OMO }
+		available = {
+			has_completed_focus = OMO_steal_slaves
+			has_completed_focus = OMO_slave_based_economy
+			NOT = { has_decision = OMO_slaves_demobilization }
+			NOT = { has_decision = OMO_steal_slaves_canada }
+			NOT = { has_decision = OMO_steal_slaves_usa }
+			hidden_trigger = {
+				NOT = { has_idea = OMO_idea_rebellion }
+				NOT = { has_completed_focus = OMO_kel_war_USA }
+				country_exists = MEX
+			}
+		}
+		visible = {
+			has_completed_focus = OMO_steal_slaves
+			has_completed_focus = OMO_slave_based_economy
+			hidden_trigger = {
+				NOT = { has_completed_focus = OMO_kel_war_USA }
+				country_exists = MEX
+			}
+		}
+		cost = 100
+		days_remove = 60
+		days_re_enable = 30
+		remove_effect = {
+			OMO = { set_country_flag = slaves_stealed_mex
+				random_list = {
+					60 = {
+						country_event = OMO_event.11
+					}
+					40 = {
+						set_country_flag = slave_stealed_fail
+						country_event = OMO_event.12
+					}
+				}
+			}
+		}
+	}
+	
+	OMO_steal_slaves_usa = {
+		allowed = { original_tag = OMO }
+		available = {
+			has_completed_focus = OMO_steal_slaves
+			has_completed_focus = OMO_slave_based_economy
+			NOT = { has_decision = OMO_slaves_demobilization }
+			NOT = { has_decision = OMO_steal_slaves_canada }
+			NOT = { has_decision = OMO_steal_slaves_mexico }
+			hidden_trigger = {
+				NOT = { has_idea = OMO_idea_rebellion }
+				NOT = { has_completed_focus = OMO_kel_war_USA }
+				country_exists = USA
+			}
+		}
+		visible = {
+			has_completed_focus = OMO_steal_slaves
+			has_completed_focus = OMO_slave_based_economy
+			hidden_trigger = {
+				NOT = { has_completed_focus = OMO_kel_war_USA }
+				country_exists = USA
+			}
+		}
+		cost = 100
+		days_remove = 60
+		days_re_enable = 30
+		remove_effect = {
+			OMO = { set_country_flag = slaves_stealed_usa 
+				random_list = {
+					60 = {
+						country_event = OMO_event.11
+					}
+					40 = {
+						set_country_flag = slave_stealed_fail
+						country_event = OMO_event.12
+					}
+				}
+			}
+		}
+	}
+	
+	OMO_steal_slaves_canada = {
+		allowed = { original_tag = OMO }
+		available = {
+			has_completed_focus = OMO_steal_slaves
+			has_completed_focus = OMO_slave_based_economy
+			NOT = { has_decision = OMO_slaves_demobilization }
+			NOT = { has_decision = OMO_steal_slaves_usa }
+			NOT = { has_decision = OMO_steal_slaves_mexico }
+			hidden_trigger = {
+				NOT = { has_completed_focus = OMO_kel_war_USA }
+				country_exists = CAN
+				NOT = { has_idea = OMO_idea_rebellion }
+			}
+		}
+		visible = {
+			has_completed_focus = OMO_steal_slaves
+			has_completed_focus = OMO_slave_based_economy
+			hidden_trigger = {
+				NOT = { has_completed_focus = OMO_kel_war_USA }
+				country_exists = CAN
+			}
+		}
+		cost = 100
+		days_remove = 60
+		days_re_enable = 30
+		remove_effect = {
+			OMO = { set_country_flag = slaves_stealed_can
+				random_list = {
+					60 = {
+						country_event = OMO_event.11
+					}
+					40 = {
+						set_country_flag = slave_stealed_fail
+						country_event = OMO_event.12
+					}
+				}
+			}
+		}
+	}
+	
+	OMO_slaves_demobilization = {
+		visible = { 
+			NOT = { has_idea = OMO_idea_rebellion }
+			has_completed_focus = OMO_slave_based_economy
+			check_variable = {
+				slaves_amount > 4999
+			}
+		}
+		allowed = { 
+			original_tag = OMO
+		}
+		available = {
+			has_completed_focus = OMO_slave_based_economy
+			check_variable = {
+				slaves_amount > 4999
+			}
+			hidden_trigger = { NOT = { has_idea = OMO_idea_rebellion } }
+			NOT = { has_decision = OMO_slaves_mobilization }
+		}
+		cost = 50
+		complete_effect = {
+			add_to_variable = {
+				var = slaves_amount
+				value = -5000
+			}
+			add_to_variable = {
+				var = var_slaves_cg
+				value = 0.02
+			}
+			add_to_variable = {
+				var = var_slaves_cc
+				value = 0.025
+			}
+			add_to_variable = {
+				var = var_slaves_if
+				value = -0.025
+			}
+			add_to_variable = {
+				var = var_slaves_ps
+				value = -0.025
+			}
+			add_to_variable = {
+				var = var_slaves_sf
+				value = 0.025
+			}
+		}
+		days_remove = 30
+		days_re_enable = 1
+	}
+}

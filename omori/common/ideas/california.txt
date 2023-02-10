@@ -1,0 +1,11 @@
+ideas = {
+	country = {
+		CAL_idea_split = {
+			picture = CAL_split
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+	}
+}

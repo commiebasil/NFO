@@ -1,0 +1,72 @@
+guiTypes = {
+   containerWindowType = {
+       name = "OMO_prepare_to_war_with_USA_container" 
+       position = { x = 0 y = 0 }
+	   size = { width = 100% height= 450 }	   
+		
+		iconType = {
+			name = "header"
+			position = { x = -3 y = -27 }
+			spriteType = "GFX_OMO_prepare_to_war_with_USA_header"
+			alwaystransparent = yes
+		}
+		
+       iconType = {
+			name = "progressbar"
+			position = { x = -2 y = 350 }
+			spriteType = "GFX_prepare_to_war_with_USA_progressbar"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "progress_percent"
+			position = { x = 120 y = 315 }
+			text = OMO_prepare_to_war_with_USA_percent_progress
+			font = "hoi_18mbs"
+			maxWidth = 250
+			format = center
+		}
+		
+		iconType = {
+			name = "pointer"
+			position = { x = 373 y = 288 }
+			spriteType = "GFX_OMO_prepare_to_war_with_USA_pointer"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "pointer_text"
+			position = { x = 270 y = 268}
+			text = OMO_prepare_to_war_with_USA_pointer_text
+			font = "hoi_18mbs"
+			maxWidth = 250
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "description"
+			position = { x = -1 y = 170 }
+			text = OMO_prepare_to_war_with_USA_description
+			font = "hoi_18mbs"
+			maxWidth = 500
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "coup_status"
+			position = { x = 10 y = 390 }
+			text = OMO_prepare_to_war_with_USA_coup_status
+			font = "hoi_18mbs"
+			maxWidth = 500
+			format = left
+		}
+		instantTextBoxType = {
+			name = "div_amount"
+			position = { x = 10 y = 420 }
+			text = OMO_prepare_to_war_with_USA_coup_status_divamount
+			font = "hoi_18mbs"
+			maxWidth = 500
+			format = left
+		}
+	}
+}

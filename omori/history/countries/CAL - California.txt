@@ -1,0 +1,69 @@
+
+
+capital = 910
+oob = "CAL_1936"
+
+set_research_slots = 3 
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1 
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1" 
+	election_frequency = 48 
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 10 
+	neutrality = 60
+	communism = 10 
+	fascism = 20 
+}
+
+create_country_leader = {
+    name = "Earl Warren"
+    desc = ""
+    picture = "gfx/leaders/CAL/portrait_CAL_earl_warren.dds"
+    expire = "1965.1.1"
+    ideology = centrism
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Kel"
+    desc = ""
+    picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+    expire = "1965.1.1" 
+    ideology = fascism_ideology
+    #conservatism, liberalism и socialism - демократия
+    #marxism, leninism, stalinism, anti_revisionism, anarchist_communism - коммунизм
+    #nazism, fascism_ideology, falangism, rexism - национализм 
+    #despotism, oligarchism, moderatism и moderatism - нейтралитет 
+    traits = {
+        #
+    }
+}
+}

@@ -1,0 +1,382 @@
+OMO_prepare_to_war_with_USA_decis = {
+	OMO_prepare_coup_in_USA_texas = {
+		highlight_states = {
+				highlight_state_targets = {
+					state = 375
+				}
+			}
+		visible = { 
+			has_completed_focus = OMO_march_on_east
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		allowed = { 
+			original_tag = OMO
+		}
+		available = {
+			has_completed_focus = OMO_march_on_east
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+			has_political_power > 49
+		}
+		custom_cost_text = decision_cost_ie_2000_pp_50
+		complete_effect = {
+			custom_effect_tooltip = 1_OMO_add_readiness_2
+			add_to_variable = {
+				var = OMO_war_with_USA_readiness_var
+				value = 5
+			}
+			add_to_variable = {
+				var = OMO_war_with_USA_divamount_var
+				value = 4
+			}
+			375 = { set_state_flag = coup_prepared }
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2000
+				}
+				add_political_power = -50
+			}
+		}
+		fire_only_once = yes
+		days_remove = 30
+	}
+	
+	OMO_prepare_coup_in_USA_louisiana = {
+		highlight_states = {
+				highlight_state_targets = {
+					state = 371
+				}
+			}
+		visible = { 
+			has_completed_focus = OMO_march_on_east
+			375 = { has_state_flag = coup_prepared }
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		allowed = { 
+			original_tag = OMO
+		}
+		available = {
+			has_completed_focus = OMO_march_on_east
+			375 = { has_state_flag = coup_prepared }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_arkanzas }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_oklahoma }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_texas }
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = decision_cost_ie_2000
+		complete_effect = {
+			custom_effect_tooltip = 1_OMO_add_readiness_2
+			add_to_variable = {
+				var = OMO_war_with_USA_readiness_var
+				value = 5
+			}
+			add_to_variable = {
+				var = OMO_war_with_USA_divamount_var
+				value = 3
+			}
+			371 = { set_state_flag = coup_prepared }
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2000
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 30
+	}
+	
+	OMO_prepare_coup_in_USA_arkanzas = {
+		highlight_states = {
+				highlight_state_targets = {
+					state = 372
+				}
+			}
+		visible = { 
+			has_completed_focus = OMO_march_on_east
+			375 = { has_state_flag = coup_prepared }
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		allowed = { 
+			original_tag = OMO
+		}
+		available = {
+			has_completed_focus = OMO_march_on_east
+			375 = { has_state_flag = coup_prepared }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_louisiana }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_oklahoma }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_texas }
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = decision_cost_ie_2000
+		complete_effect = {
+			custom_effect_tooltip = 1_OMO_add_readiness_2
+			add_to_variable = {
+				var = OMO_war_with_USA_readiness_var
+				value = 5
+			}
+			add_to_variable = {
+				var = OMO_war_with_USA_divamount_var
+				value = 3
+			}
+			372 = { set_state_flag = coup_prepared }
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2000
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 30
+	}
+	
+	OMO_prepare_coup_in_USA_oklahoma = {
+		highlight_states = {
+				highlight_state_targets = {
+					state = 374
+				}
+			}
+		visible = { 
+			has_completed_focus = OMO_march_on_east
+			375 = { has_state_flag = coup_prepared }
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		allowed = { 
+			original_tag = OMO
+		}
+		available = {
+			has_completed_focus = OMO_march_on_east
+			375 = { has_state_flag = coup_prepared }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_louisiana }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_arkanzas }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_texas }
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = decision_cost_ie_2000
+		complete_effect = {
+			custom_effect_tooltip = 1_OMO_add_readiness_2
+			add_to_variable = {
+				var = OMO_war_with_USA_readiness_var
+				value = 5
+			}
+			add_to_variable = {
+				var = OMO_war_with_USA_divamount_var
+				value = 3
+			}
+			374 = { set_state_flag = coup_prepared }
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2000
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 30
+	}
+	
+	OMO_prepare_coup_in_USA_more_divs = {
+		visible = { 
+			has_completed_focus = OMO_march_on_east
+			375 = { has_state_flag = coup_prepared }
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		allowed = { 
+			original_tag = OMO
+		}
+		available = {
+			has_completed_focus = OMO_march_on_east
+			375 = { has_state_flag = coup_prepared }
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 4999 }
+		}
+		custom_cost_text = decision_cost_ie_5000
+		complete_effect = {
+			custom_effect_tooltip = 1_OMO_add_readiness
+			custom_effect_tooltip = 1_OMO_prepare_coup_in_USA_more_divs
+			add_to_variable = {
+				var = OMO_war_with_USA_readiness_var
+				value = 10
+			}
+			add_to_variable = {
+				var = OMO_war_with_USA_divamount_var
+				value = 7
+			}
+			374 = { set_state_flag = coup_prepared }
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -5000
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 30
+	}
+	
+	OMO_prepare_sabotage_in_USA_army = {
+		visible = { 
+			has_completed_focus = OMO_march_on_east
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		allowed = { 
+			original_tag = OMO
+		}
+		available = {
+			has_completed_focus = OMO_march_on_east
+			NOT = { has_decision = OMO_start_the_operation }
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+			has_political_power > 199
+		}
+		custom_cost_text = decision_cost_ie_2000_pp_200
+		complete_effect = {
+			custom_effect_tooltip = 1_OMO_add_readiness_3
+			USA = { set_country_flag = USA_sabotages_is_prepared }
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2000
+				}
+				add_political_power = -200
+			}
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = OMO_war_with_USA_readiness_var
+				value = 15
+			}
+		}
+		modifier = { 
+			production_speed_arms_factory_factor = -0.05
+			consumer_goods_factor = 0.05
+		}
+		days_remove = 60
+		fire_only_once = yes
+	}
+	
+	OMO_start_the_operation = {
+		visible = { 
+			has_completed_focus = OMO_march_on_east
+		}
+		allowed = { 
+			original_tag = OMO
+		}
+		available = {
+			has_completed_focus = OMO_march_on_east
+			check_variable = { OMO_war_with_USA_readiness_var > 79 }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_arkanzas }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_texas }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_oklahoma }
+			NOT = { has_decision = OMO_prepare_coup_in_USA_louisiana }
+			NOT = { has_decision = OMO_prepare_sabotage_in_USA_army }
+		}
+		cost = 100
+		complete_effect = {
+			custom_effect_tooltip = 1_OMO_start_war_with_USA
+			country_event = OMO_event.14
+		}
+		remove_effect = {
+			hidden_effect = {
+				declare_war_on = {
+					target = USA
+					type = annex_everything
+				}
+				set_global_flag = superevent_omori_marches_east
+				if = {
+					limit = { USA = { has_country_flag = USA_sabotages_is_prepared } }
+					USA = { country_event = OMO_event.10 }
+				}
+				if = {
+					limit = { 375 = { has_state_flag = coup_prepared } }
+					USO = { 
+						add_state_core = 375 
+						transfer_state = 375
+					}
+				}
+				if = {
+					limit = { 374 = { has_state_flag = coup_prepared } }
+					USO = { 
+						add_state_core = 374 
+						transfer_state = 374
+					}
+				}
+				if = {
+					limit = { 372 = { has_state_flag = coup_prepared } }
+					USO = { 
+						add_state_core = 372 
+						transfer_state = 372
+					}
+				}
+				if = {
+					limit = { 371 = { has_state_flag = coup_prepared } }
+					USO = { 
+						add_state_core = 371
+						transfer_state = 371
+					}
+				}
+				USO = { load_oob = "USO_1936" }
+				for_loop_effect = {
+					end = OMO.OMO_war_with_USA_divamount_var
+					
+					375 = {
+						create_unit = {
+							division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0"
+							owner = USO
+						}
+					}
+				}
+				puppet = USO
+				USO = {
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+						last_election = "1935.12.17"
+						election_frequency = 48
+						long_name = USO_neutrality_party_long
+						name = USO_neutrality_party
+					}
+					declare_war_on = {
+						target = USA
+						type = annex_everything
+					}
+				}
+				if = {
+					limit = { has_completed_focus = OMO_kamikadze_sproutmole }
+					news_event = {
+						id = OMO_newsevent.1
+						days = 10
+						random_hours = 12
+						random_days = 10
+					}
+				}
+				if = {
+					limit = { country_exists = WBR }
+					annex_country = {
+						target = WBR
+						transfer_troops = no
+					}
+					912 = { add_core_of = OMO }
+				}
+				set_country_flag = OMO_prepare_war_mechanic_ended 
+			}
+		}
+		days_remove = 15
+		fire_only_once = yes
+	}
+}

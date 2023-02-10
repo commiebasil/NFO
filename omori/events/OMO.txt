@@ -1,0 +1,297 @@
+add_namespace = OMO_event
+add_namespace = OMO_newsevent
+
+country_event = {
+    id = OMO_event.1
+	
+    title = OMO_event.1.t
+	
+    desc = OMO_event.1.desc
+	
+	picture = GFX_OMO_event_plutocapture
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = OMO_event.1.a
+    }
+}
+
+country_event = {
+    id = OMO_event.2
+	
+    title = OMO_event.2.t
+	
+    desc = OMO_event.2.desc
+	
+	picture = GFX_OMO_event_camp
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = OMO_event.2.a
+    }
+}
+
+country_event = {
+    id = OMO_event.3
+	
+    title = OMO_event.3.t
+	
+    desc = OMO_event.3.desc
+	
+	picture = GFX_OMO_event_meeting
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = OMO_event.3.a
+    }
+}
+
+country_event = {
+    id = OMO_event.4
+	
+    title = OMO_event.4.t
+	
+    desc = OMO_event.4.desc
+	
+	picture = GFX_OMO_event_end
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = OMO_event.4.a
+    }
+}
+
+country_event = {
+    id = OMO_event.5
+	
+    title = OMO_event.5.t
+	
+    desc = OMO_event.5.desc
+	
+	picture = GFX_OMO_event_mari
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = OMO_event.5.a
+    }
+}
+
+country_event = {
+	id = OMO_event.6
+	
+	title = OMO_event.6.t
+	
+	desc = OMO_event.6.desc
+	
+	picture = GFX_OMO_event_kelwin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OMO_event.6.a
+	}
+}
+
+country_event = {
+	id = OMO_event.7
+	
+	title = OMO_event.7.t
+	
+	desc = OMO_event.7.desc
+	
+	picture = GFX_OMO_event_kelwin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OMO_event.7.a
+		add_ideas = OMO_idea_rebellion
+	}
+}
+
+country_event = {
+	id = OMO_event.8
+	
+	title = OMO_event.8.t
+	
+	desc = OMO_event.8.desc
+	
+	picture = GFX_OMO_event_kelwin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OMO_event.8.a
+		remove_ideas = OMO_idea_rebellion
+	}
+}
+
+country_event = {
+	id = OMO_event.9
+	
+	title = OMO_event.9.t
+	
+	desc = OMO_event.9.desc
+	
+	picture = GFX_OMO_event_kelwin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OMO_event.9.a
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = OMO_event.10
+	
+	title = OMO_event.10.t
+	
+	desc = OMO_event.10.desc
+	
+	picture = GFX_OMO_event_kelwin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OMO_event.10.a
+		add_ideas = OMO_war_sabotage
+	}
+}
+
+#Country accepts
+country_event = {
+	id = OMO_event.11
+	
+	title = OMO_event.11.t
+	
+	desc = OMO_event.11.desc
+	
+	picture = GFX_OMO_event_kelwin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OMO_event.11.a
+		add_political_power = 50
+		OMO = { 
+			clr_country_flag = slaves_stealed_mex
+			clr_country_flag = slaves_stealed_usa
+			clr_country_flag = slaves_stealed_can
+		}
+		USA = {
+			random_owned_state = {
+				add_manpower = -6000
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { 
+					modifier = OMO_idea_bonus_slaves
+				}
+			}
+			add_to_variable = { bonus_slaves_amount = 5000 }
+			add_to_variable = { var_bonus_slaves_cg = -0.02 }
+			add_to_variable = { var_bonus_slaves_cc = -0.05 }
+			add_to_variable = { var_bonus_slaves_if = 0.05 }
+			add_to_variable = { var_bonus_slaves_ps = 0.05 }
+		}
+		else = {
+			set_variable = { bonus_slaves_amount = 0.0 }
+			set_variable = { var_bonus_slaves_cg = 0.0 }
+			set_variable = { var_bonus_slaves_cc = 0.0 }
+			set_variable = { var_bonus_slaves_if = 0.0 }
+			set_variable = { var_bonus_slaves_ps = 0.0 }
+			add_dynamic_modifier = {
+				modifier = OMO_idea_bonus_slaves
+				days = 180
+			}
+			add_to_variable = { var_bonus_slaves_cg = -0.02 }
+			add_to_variable = { var_bonus_slaves_cc = -0.05 }
+			add_to_variable = { var_bonus_slaves_if = 0.05 }
+			add_to_variable = { var_bonus_slaves_ps = 0.05 }
+		}
+	}
+}
+
+#Country rejects
+country_event = {
+	id = OMO_event.12
+	
+	title = OMO_event.12.t
+	
+	desc = OMO_event.12.desc
+	
+	picture = GFX_OMO_event_kelwin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OMO_event.12.a
+		add_political_power = -50
+		OMO = { 
+			clr_country_flag = slave_stealed_fail 
+			clr_country_flag = slaves_stealed_mex
+			clr_country_flag = slaves_stealed_usa
+			clr_country_flag = slaves_stealed_can
+		}
+	}
+}
+
+#Kel main tree end
+country_event = {
+	id = OMO_event.13
+	
+	title = OMO_event.13.t
+	
+	desc = OMO_event.13.desc
+	
+	picture = GFX_OMO_event_kelwin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OMO_event.13.a
+		complete_national_focus = OMO_march_on_east
+	}
+}
+
+#Pre-war event
+country_event = {
+	id = OMO_event.14
+	
+	title = OMO_event.14.t
+	
+	desc = OMO_event.14.desc
+	
+	picture = OMO_event_endoftheway
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OMO_event.14.a
+	}
+}
+
+#9/11 news event
+news_event = {
+	id = OMO_newsevent.1
+	title = OMO_newsevent.1.t
+	desc = OMO_newsevent.1.desc
+	picture = OMO_event_isbboom
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OMO_newsevent.1.a
+		set_global_flag = superevent_isbboom
+	}
+}

@@ -1,0 +1,217 @@
+characters = {	
+	OMO_pluto_advisor = {
+		name = OMO_pluto_advisor
+		portraits = {
+				civilian = {
+					small = GFX_idea_OMO_pluto
+				}
+		}
+		advisor = {
+			cost = 100	
+			slot = political_advisor
+			idea_token = OMO_pluto_advisor
+			removal_cost = -1
+			allowed = {
+				original_tag = OMO
+			}
+			traits = { popular_figurehead }
+		}
+	}
+	OMO_jawsum_advisor = {
+		name = OMO_jawsum_advisor
+		portraits = {
+				civilian = {
+					small = GFX_idea_OMO_jawsum
+				}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = OMO_jawsum_advisor
+			removal_cost = -1
+			allowed = {
+				original_tag = OMO
+			}
+			traits = { captain_of_industry }
+		}
+	}
+	OMO_hero_advisor = {
+		name = OMO_hero_advisor
+		portraits = {
+				civilian = {
+					small = GFX_idea_OMO_hero
+				}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = OMO_hero_advisor
+			removal_cost = -1
+			allowed = {
+				original_tag = OMO
+			}
+			available = {
+				OMO = { has_country_flag = OMO_hero_enabled }
+			}
+			visible = {
+				OMO = { has_country_flag = OMO_hero_enabled }
+			}
+			traits = { 
+			burgsys_booster popular_figurehead smooth_talking_charmer 
+			}
+		}
+	}
+	
+	OMO_sir_maximus = {
+		name = OMO_sir_maximus
+		portraits = {
+			army = {
+				large = GFX_OMO_sir_maximus
+				small = GFX_idea_OMO_sir_maximus
+			}
+		}
+		corps_commander = {
+            traits = { media_personality war_hero }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 4
+            logistics_skill = 3
+        }
+		advisor = {
+			cost = 150
+			slot = army_chief
+			idea_token = OMO_sir_maximus_advisor
+			removal_cost = -1
+			allowed = {
+				original_tag = OMO
+			}
+			traits = { army_chief_offensive_3 }
+		}
+	}
+	
+	OMO_capt_spaceboy = {
+		name = OMO_capt_spaceboy
+		portraits = {
+			army = {
+				large = GFX_OMO_capt_spaceboy
+			}
+		}
+		navy_leader = {
+            traits = { war_hero fleet_protector superior_tactician destroyer_leader }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 3
+            maneuvering_skill = 5
+            coordination_skill = 4
+        }
+	}
+	
+	OMO_omori = {
+		name = OMO_omori
+		portraits = {
+			army = {
+				large = GFX_OMO_omori
+				small = GFX_idea_OMO_omori
+			}
+		}
+		field_marshal = {
+			traits = { old_guard politically_connected war_hero media_personality infantry_officer offensive_doctrine }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 6
+			logistics_skill = 7
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = OMO_omori
+			ledger = army
+			available = {
+				tag = OMO
+			}
+			traits = { superior_firepower_expert }
+		}
+	}
+	
+	OMO_Alexander_Novikov = {
+		name = OMO_Alexander_Novikov
+		portraits = {
+			army = {
+				large = GFX_OMO_Alexander_Novikov
+				small = GFX_idea_OMO_Alexander_Novikov
+			}
+		}
+		corps_commander = {
+			traits = { old_guard politically_connected substance_abuser }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	OMO_Jim_Annler = {
+		name = OMO_Jim_Annler
+		portraits = {
+			army = {
+				large = GFX_OMO_Jim_Annler
+				small = GFX_idea_OMO_Jim_Annler
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	OMO_Stanley = {
+		name = OMO_Stanley
+		portraits = {
+			army = {
+				large = GFX_OMO_Stanley
+				small = GFX_idea_OMO_Stanley
+			}
+		}
+		corps_commander = {
+			traits = { old_guard war_hero brilliant_strategist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			idea_token = OMO_Stanley
+			ledger = army
+			available = {
+				tag = OMO
+			}
+			traits = { army_logistics_3 }
+		}
+	}
+	
+	OMO_necoarc = {
+		name = OMO_necoarc
+		portraits = {
+			army = {
+				small = GFX_idea_OMO_necoarc
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = OMO_necoarc
+			available = { tag = OMO }
+			traits = { princess_of_terror }
+		}
+	}
+}

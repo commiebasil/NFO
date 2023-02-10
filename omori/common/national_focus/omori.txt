@@ -1,0 +1,774 @@
+focus_tree = {
+	id = omori_focus
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = OMO
+		}
+		modifier = {
+			add = 10
+			original_tag = OMO
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+	
+	focus = {
+		id = OMO_mobilization
+		icon = GFX_focus_OMO_mobilization
+		x = 10
+		y = 0
+		cost = 1
+		completion_reward = {
+			add_ideas = extensive_conscription
+			add_ideas = limited_exports
+			add_ideas = war_economy
+			add_manpower = 10000
+			add_offsite_building = { type = arms_factory level = 1 }
+			
+		}
+	}
+	
+	focus = {
+		id = OMO_end_cw
+		icon = GFX_focus_OMO_stab
+		x = 10
+		y = 1
+		cost = 10
+		prerequisite = { 
+		focus = OMO_mobilization
+		}
+		available = {
+			has_war = no
+			is_puppet = no
+		}
+		completion_reward = {
+			remove_ideas = OMO_idea_chaos
+		}
+	}
+	
+	focus = {
+		id = OMO_political_stab
+		icon = GFX_focus_OMO_political_stab
+		cost = 10
+		prerequisite = {
+			focus = OMO_end_cw
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_PO
+			hidden_effect = {
+				activate_decision = OMO_political_struggle_decis
+			}
+			add_political_power = 50
+		}
+		x = 10
+		y = 2
+
+	}
+	
+	focus = {
+		id = OMO_kel
+		icon = GFX_focus_OMO_kel
+		cost = 5
+		offset = {
+			x = 4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_kel
+			}
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = OMO_basil }
+			}
+		}
+		prerequisite = {
+			focus = OMO_political_stab
+		}
+		mutually_exclusive = {
+			focus = OMO_basil
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_kelsel
+			add_political_power = +50
+			mark_focus_tree_layout_dirty = yes
+		}
+		
+		x = 6
+		y = 4
+
+	}
+	
+	focus = {
+		id = OMO_kel_1
+		icon = GFX_focus_OMO_california_labor_camps
+		cost = 5
+		offset = {
+			x = 4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_kel
+			}
+		}
+		prerequisite = {
+			focus = OMO_kel
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_kel_addpower
+			add_ideas = OMO_idea_los_angeles_labor_camps
+			add_stability = 0.05
+			add_political_power = 20
+			country_event = OMO_event.2
+			hidden_effect = {
+				add_to_variable = {
+					var = kel_political_power
+					value = 1
+				}
+			}
+		}
+		x = 5
+		y = 5
+
+	}
+	
+	focus = {
+		id = OMO_kel_2
+		icon = GFX_focus_OMO_meeting_with_himmler
+		cost = 5
+		offset = {
+			x = 4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_kel
+			}
+		}
+		prerequisite = {
+			focus = OMO_kel
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_kel_addpower
+			add_stability = 0.05
+			add_political_power = 20
+			add_popularity = {
+				ideology = burgsys
+				popularity = 0.09
+			}
+			country_event = OMO_event.3
+			hidden_effect = {
+				add_to_variable = {
+					var = kel_political_power
+					value = 1
+				}
+			}
+		}
+		x = 7
+		y = 5
+
+	}
+	
+	focus = {
+		id = OMO_basil
+		icon = GFX_focus_OMO_basil
+		cost = 5
+		offset = {
+			x = -4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_basil
+			}
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = OMO_kel }
+			}
+		}
+		prerequisite = {
+			focus = OMO_political_stab
+		}
+		mutually_exclusive = {
+			focus = OMO_kel
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_basilsel
+			add_political_power = +50
+			hidden_effect = {
+				add_to_variable = {
+					var = basil_political_power
+					value = 1
+				}
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+		x = 14
+		y = 4
+
+	}
+	
+	focus = {
+		id = OMO_basil_1
+		icon = GFX_focus_OMO_creating_worker_soviets
+		cost = 5
+		offset = {
+			x = -4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_basil
+			}
+		}
+		prerequisite = {
+			focus = OMO_basil
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_basil_addpower
+			add_stability = -0.05
+			add_political_power = 20
+			add_ideas = OMO_idea_worker_soviets
+			hidden_effect = {
+				add_to_variable = {
+						var = basil_political_power
+						value = 1
+				}
+			}
+		}
+		x = 13
+		y = 5
+
+	}
+	
+	focus = {
+		id = OMO_basil_3
+		icon = GFX_focus_OMO_kolkhoz
+		cost = 5
+		offset = {
+			x = -4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_basil
+			}
+		}
+		prerequisite = {
+			focus = OMO_basil_1
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_basil_addpower
+			add_offsite_building = {
+				type = industrial_complex 
+				level = 1
+			}
+			add_political_power = 20
+			hidden_effect = {
+				add_to_variable = {
+						var = basil_political_power
+						value = 1
+				}
+			}
+			
+		}
+		x = 13
+		y = 6
+
+	}
+	
+	focus = {
+		id = OMO_basil_5
+		icon = GFX_focus_OMO_lastresort
+		cost = 5
+		offset = {
+			x = -4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_basil
+			}
+		}
+		prerequisite = {
+			focus = OMO_basil_3
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_basil_addpower
+			add_political_power = 20
+			add_offsite_building = {
+				type = industrial_complex 
+				level = 2
+			}
+			remove_advisor_role = {
+				character = "OMO_jawsum_advisor"
+				slot = political_advisor
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = basil_political_power
+					value = 1
+				}
+			}
+		}
+		x = 13
+		y = 7
+
+	}
+	
+	focus = {
+		id = OMO_kel_3
+		icon = GFX_focus_OMO_plutocapture
+		cost = 5
+		offset = {
+			x = 4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_kel
+			}
+		}
+		prerequisite = {
+			focus = OMO_kel_1
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_kel_addpower
+			add_political_power = 20
+			country_event = OMO_event.1
+			remove_advisor_role = {
+				character = "OMO_pluto_advisor"
+				slot = political_advisor
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = kel_political_power
+					value = 1
+				}
+			}
+		}
+		x = 5
+		y = 6
+
+	}
+	
+	focus = {
+		id = OMO_kel_4
+		icon = GFX_focus_OMO_privilegies_for_native_people
+		cost = 5
+		offset = {
+			x = 4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_kel
+			}
+		}
+		prerequisite = {
+			focus = OMO_kel_2
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_kel_addpower
+			911 = { add_manpower = 20000}
+			add_political_power = 20
+			hidden_effect = {
+				add_to_variable = {
+					var = kel_political_power
+					value = 1
+				}
+			}
+		}
+		x = 7
+		y = 6
+
+	}
+	
+	focus = {
+		id = OMO_kel_5
+		icon = GFX_focus_OMO_aubrey_reeducation
+		cost = 5
+		offset = {
+			x = 4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_kel
+			}
+		}
+		prerequisite = {
+			focus = OMO_kel_3
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_kel_addpower
+			add_stability = 0.05
+			add_political_power = 20
+			hidden_effect = {
+				add_to_variable = {
+					var = kel_political_power
+					value = 1
+				}
+			}
+		}
+		x = 5
+		y = 7
+
+	}
+	
+	focus = {
+		id = OMO_kel_6
+		icon = GFX_focus_OMO_prime_minister_hero
+		cost = 5
+		offset = {
+			x = 4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_kel
+			}
+		}
+		prerequisite = {
+			focus = OMO_kel_4
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_kel_addpower
+			set_country_flag = OMO_hero_enabled
+			add_ideas = OMO_hero_advisor
+			add_political_power = 20
+			hidden_effect = {
+				add_to_variable = {
+					var = kel_political_power
+					value = 1
+				}
+			}
+		}
+		x = 7
+		y = 7
+
+	}
+	
+	focus = {
+		id = OMO_kel_end
+		icon = GFX_focus_OMO_basil_execution
+		cost = 10
+		offset = {
+			x = 4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_kel
+			}
+		}
+		prerequisite = { focus = OMO_kel_6 }
+		prerequisite = { focus = OMO_kel_5 }
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_kel_addpower_massive
+			kill_ideology_leader = communism
+			add_popularity = {
+				ideology = communism
+				popularity = -0.24
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = kel_political_power
+					value = 5
+				}
+			}
+		}
+		x = 6
+		y = 8
+
+	}
+	
+	focus = {
+		id = OMO_basil_2
+		icon = GFX_focus_OMO_destroy_photoalbum
+		cost = 5
+		offset = {
+			x = -4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_basil
+			}
+		}
+		prerequisite = {
+			focus = OMO_basil
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_basil_addpower
+			add_stability = 0.05
+			add_political_power = 20
+			country_event = OMO_event.5
+			hidden_effect = {
+				add_to_variable = {
+					var = basil_political_power
+					value = 1
+				}
+			}
+		}
+		x = 15
+		y = 5
+
+	}
+	
+	focus = {
+		id = OMO_basil_4
+		icon = GFX_focus_OMO_watermelon
+		cost = 5
+		offset = {
+			x = -4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_basil
+			}
+		}
+		prerequisite = {
+			focus = OMO_basil_2
+		}
+		available = {
+			country_exists = SAF
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_basil_addpower
+			add_ideas = OMO_idea_watermelon
+			add_opinion_modifier = { target = SAF modifier = medium_increase }
+			add_political_power = 20
+			hidden_effect = {
+				add_to_variable = {
+					var = basil_political_power
+					value = 1
+				}
+			}
+		}
+		x = 15
+		y = 6
+
+	}
+	
+	focus = {
+		id = OMO_basil_6
+		icon = GFX_focus_OMO_lgbtq
+		cost = 5
+		offset = {
+			x = -4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_basil
+			}
+		}
+		prerequisite = {
+			focus = OMO_basil_4
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_basil_addpower
+			add_stability = -0.05
+			add_political_power = 20
+			hidden_effect = {
+				add_to_variable = {
+					var = basil_political_power
+					value = 1
+				}
+			}
+		}
+		x = 15
+		y = 7
+
+	}
+	
+	focus = {
+		id = OMO_basil_end
+		icon = GFX_focus_OMO_kel_execution
+		cost = 10
+		offset = {
+			x = -4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_basil
+			}
+		}
+		prerequisite = { focus = OMO_basil_6 }
+		prerequisite = { focus = OMO_basil_5 }
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_basil_addpower_massive
+			kill_ideology_leader = burgsys
+			add_popularity = {
+				ideology = burgsys
+				popularity = -0.40
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = basil_political_power
+					value = 5
+				}
+			}
+			
+		}
+		x = 14
+		y = 8
+
+	}
+	
+	focus = {
+		id = OMO_political_struggle_end_kel
+		icon = GFX_focus_OMO_burger_heil
+		cost = 10
+		offset = {
+			x = 4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_kel
+			}
+		}
+		available = {
+			kel_more_than_basil = yes
+		}
+		prerequisite = {
+			focus = OMO_kel_end
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_kel_win
+			add_political_power = 100
+			hidden_effect = {
+				set_politics = {
+					ruling_party = burgsys
+					elections_allowed = no
+				}
+				set_global_flag = superevent_kelwin
+			}
+		}
+		x = 6
+		y = 9
+	}
+	
+	focus = {
+		id = OMO_political_struggle_end_basil
+		icon = GFX_focus_OMO_basilwin
+		cost = 10
+		offset = {
+			x = -4
+			y = 0
+			trigger = { 
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = OMO_basil
+			}
+		}
+		available = {
+			basil_more_than_kel = yes
+		}
+		prerequisite = {
+			focus = OMO_basil_end
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_basil_win
+			add_political_power = 100
+			hidden_effect = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+				set_global_flag = superevent_basilwin
+			}
+		}
+		
+		x = 14
+		y = 9
+	}
+	
+	focus = {
+		id = OMO_new_era
+		icon = GFX_focus_OMO_new_era
+		cost = 10
+		prerequisite = {
+			focus = OMO_political_struggle_end_kel
+			focus = OMO_political_struggle_end_basil
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_newtree
+			hidden_effect = {
+				if = {
+					limit = { has_government = communism }
+					country_event = OMO_event.4
+				}
+				else_if = {
+					limit = { has_government = burgsys }
+					load_focus_tree = {
+					tree = omori_kel_focus
+					keep_completed = no
+					}
+					country_event = OMO_event.6
+				}
+				else = { country_event = OMO_event.4 }
+			}
+		}
+		x = 10
+		y = 10
+	}
+}

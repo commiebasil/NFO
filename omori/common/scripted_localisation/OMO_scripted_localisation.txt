@@ -1,0 +1,185 @@
+defined_text = {
+	name = OMOpoliticalstruggletext
+	text = { localization_key = OMO_political_struggle_text }
+}
+
+defined_text = {
+	name = OMOcoupstatus
+	#texas
+	text = {
+		trigger = {
+			375 = { has_state_flag = coup_prepared }
+			NOT = {
+				371 = { has_state_flag = coup_prepared }
+				372 = { has_state_flag = coup_prepared }
+				374 = { has_state_flag = coup_prepared }
+			}
+		}
+		localization_key = OMO_prepare_to_war_with_USA_coup_status_2
+	}
+	#texas and louisiana
+	text = {
+		trigger = {
+			375 = { has_state_flag = coup_prepared }
+			371 = { has_state_flag = coup_prepared }
+			NOT = {
+				372 = { has_state_flag = coup_prepared }
+				374 = { has_state_flag = coup_prepared }
+			}
+		}
+		localization_key = OMO_prepare_to_war_with_USA_coup_status_3
+	}
+	#texas and arkanzas
+	text = {
+		trigger = {
+			375 = { has_state_flag = coup_prepared }
+			372 = { has_state_flag = coup_prepared }
+			NOT = {
+				371 = { has_state_flag = coup_prepared }
+				374 = { has_state_flag = coup_prepared }
+			}
+		}
+		localization_key = OMO_prepare_to_war_with_USA_coup_status_4
+	}
+	#texas and oklahoma
+	text = {
+		trigger = {
+			375 = { has_state_flag = coup_prepared }
+			374 = { has_state_flag = coup_prepared }
+			NOT = {
+				371 = { has_state_flag = coup_prepared }
+				372 = { has_state_flag = coup_prepared }
+			}
+		}
+		localization_key = OMO_prepare_to_war_with_USA_coup_status_5
+	}
+	#texas, louisiana and arkanzas
+	text = {
+		trigger = {
+			375 = { has_state_flag = coup_prepared }
+			371 = { has_state_flag = coup_prepared }
+			372 = { has_state_flag = coup_prepared }
+			NOT = { 374 = { has_state_flag = coup_prepared } }
+		}
+		localization_key = OMO_prepare_to_war_with_USA_coup_status_6
+	}
+	#texas, arkanzas and oklahoma
+	text = {
+		trigger = {
+			375 = { has_state_flag = coup_prepared }
+			374 = { has_state_flag = coup_prepared }
+			372 = { has_state_flag = coup_prepared }
+			NOT = { 371 = { has_state_flag = coup_prepared } }
+		}
+		localization_key = OMO_prepare_to_war_with_USA_coup_status_7
+	}
+	#texas, oklahoma and louisiana
+	text = {
+		trigger = {
+			375 = { has_state_flag = coup_prepared }
+			374 = { has_state_flag = coup_prepared }
+			371 = { has_state_flag = coup_prepared }
+			NOT = { 372 = { has_state_flag = coup_prepared } }
+		}
+		localization_key = OMO_prepare_to_war_with_USA_coup_status_8
+	}
+	#all
+	text = {
+		trigger = {
+			375 = { has_state_flag = coup_prepared }
+			374 = { has_state_flag = coup_prepared }
+			371 = { has_state_flag = coup_prepared }
+			372 = { has_state_flag = coup_prepared }
+		}
+		localization_key = OMO_prepare_to_war_with_USA_coup_status_9
+	}
+	text = {
+		localization_key = OMO_prepare_to_war_with_USA_coup_status_1
+	}
+}
+
+defined_text = {
+	name = OMOcoupstatusdivamount
+	text = {
+		trigger = {
+			375 = { has_state_flag = coup_prepared }
+		}
+		localization_key = OMO_prepare_to_war_with_USA_coup_status_divamount_1
+	}
+	text = {
+		localization_key = " "
+	}
+}
+
+defined_text = {
+	name = OMOslavesstealedfromwho
+	text = {
+		trigger = { 
+			OMO = { 
+				has_country_flag = slaves_stealed_mex 
+				NOT = { has_country_flag = slave_stealed_fail }
+			} 
+		}
+		localization_key = OMO_steal_slaves_mex_success
+	}
+	text = {
+		trigger = { 
+			OMO = { 
+				has_country_flag = slaves_stealed_usa
+				NOT = { has_country_flag = slave_stealed_fail }
+			} 
+		}
+		localization_key = OMO_steal_slaves_usa_success
+	}
+	text = {
+		trigger = { 
+			OMO = { 
+				has_country_flag = slaves_stealed_can
+				NOT = { has_country_flag = slave_stealed_fail }
+			} 
+		}
+		localization_key = OMO_steal_slaves_can_success
+	}
+	text = {
+		trigger = { 
+			OMO = { 
+				has_country_flag = slaves_stealed_mex 
+				has_country_flag = slave_stealed_fail
+			} 
+		}
+		localization_key = OMO_steal_slaves_mex_fail
+	}
+	text = {
+		trigger = { 
+			OMO = { 
+				has_country_flag = slaves_stealed_usa
+				has_country_flag = slave_stealed_fail
+			} 
+		}
+		localization_key = OMO_steal_slaves_usa_fail
+	}
+	text = {
+		trigger = { 
+			OMO = { 
+				has_country_flag = slaves_stealed_can
+				has_country_flag = slave_stealed_fail
+			} 
+		}
+		localization_key = OMO_steal_slaves_can_fail
+	}
+}
+defined_text = {
+	name = OMOslavesamount
+	text = {
+		trigger = {
+			NOT = { has_dynamic_modifier = { modifier = OMO_idea_bonus_slaves } }
+		}
+		localization_key = OMO_kel_slave_system_amount_no_bonus
+	}
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = OMO_idea_bonus_slaves }
+		}
+		localization_key = OMO_kel_slave_system_amount_bonus
+	}
+}

@@ -1,0 +1,663 @@
+focus_tree = {
+	id = omori_kel_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = OMO 
+		}
+	}
+	default = no
+	focus = {
+		id = OMO_kel_triumph
+		icon = GFX_focus_OMO_kel_triumph
+		cost = 1
+		x = 17
+		y = 0
+		bypass = { always = yes }
+	}
+	focus = {
+		id = OMO_burgerwehr
+		icon = GFX_focus_OMO_burgerwehr
+		cost = 10
+		x = 11
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_burgerwehr
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = OMO_idea_burgerwehr }
+			}
+		}
+
+	}
+	focus = {
+		id = OMO_slave_based_economy
+		icon = GFX_focus_OMO_slave_based_economy
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_slaves_open
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = OMO_idea_slaves }
+			}
+		}
+		x = 23
+		y = 2
+
+	}
+	focus = {
+		id = OMO_march_on_east
+		icon = GFX_focus_OMO_march_on_the_east
+		available = {
+			always = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_add_readiness
+			add_to_variable = { OMO_war_with_USA_readiness_var = 10 }
+		}
+		cost = 1
+		x = 32
+		y = 0
+
+	}
+	focus = {
+		id = OMO_real_reforms
+		icon = GFX_focus_OMO_real_reforms
+		cost = 5
+		prerequisite = {
+			focus = OMO_kel_triumph
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+		x = 17
+		y = 1
+
+	}
+	focus = {
+		id = OMO_kel_trainings
+		icon = GFX_focus_OMO_kel_trainings
+		cost = 5
+		prerequisite = {
+			focus = OMO_real_reforms
+		}
+		prerequisite = {
+			focus = OMO_burgerwehr
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_burgerwehr_modify
+			army_experience = 20
+			hidden_effect = {
+				add_to_variable = {
+					var = var_burgerwehr
+					value = 0.02
+				}
+			}
+		}
+		x = 14
+		y = 4
+
+	}
+	focus = {
+		id = OMO_kel_army_entry
+		icon = GFX_focus_OMO_kel_army_entry
+		cost = 5
+		prerequisite = {
+			focus = OMO_kel_trainings
+		}
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+		x = 12
+		y = 5
+
+	}
+	focus = {
+		id = OMO_continue_training
+		icon = GFX_focus_OMO_continue_training
+		cost = 5
+		prerequisite = {
+			focus = OMO_kel_army_entry
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_burgerwehr_modify
+			army_experience = 10
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = infantry_weapons
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = var_burgerwehr
+					value = 0.01
+				}
+			}
+		}
+		x = 9
+		y = 6
+
+	}
+	focus = {
+		id = OMO_kel_aviation
+		icon = GFX_focus_OMO_kel_aviation
+		cost = 5
+		prerequisite = {
+			focus = OMO_kel_army_entry
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_burgerwehr_modify
+			air_experience = 10
+			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = light_air
+			}
+			
+			add_ideas = OMO_idea_cheap_fighters
+			
+			hidden_effect = {
+				add_to_variable = {
+					var = var_burgerwehr_air
+					value = 0.1
+				}
+			}
+		}
+		x = 15
+		y = 6
+
+	}
+	focus = {
+		id = OMO_kamikadze_sproutmole
+		icon = GFX_focus_OMO_kamikadze_sproutmole
+		cost = 5
+		prerequisite = {
+			focus = OMO_kel_aviation
+		}
+		completion_reward = {
+			set_technology = { suicide_craft = 1 }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+			air_experience = 10
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+				amount = 100
+				producer = OMO
+			}
+		}
+		x = 15
+		y = 7
+
+	}
+	focus = {
+		id = OMO_destroy_opposition
+		icon = GFX_focus_OMO_destroy_opposition
+		cost = 5
+		prerequisite = {
+			focus = OMO_real_reforms
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = burgsys
+				popularity = 0.1
+			}
+			add_stability = 0.05
+		}
+		x = 17
+		y = 3
+
+	}
+	focus = {
+		id = OMO_orange_joe
+		icon = GFX_focus_OMO_orange_joe
+		cost = 5
+		prerequisite = {
+			focus = OMO_destroy_opposition
+		}
+		completion_reward = {
+			set_technology = { fuel_silos = 1 }
+			911 = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 50
+		}
+		x = 17
+		y = 4
+
+	}
+	focus = {
+		id = OMO_basketball
+		icon = GFX_focus_OMO_basketball
+		cost = 5
+		prerequisite = {
+			focus = OMO_orange_joe
+		}
+		completion_reward = {
+			add_ideas = OMO_idea_basketball
+		}
+		x = 17
+		y = 5
+
+	}
+	focus = {
+		id = OMO_slaves_mobilization
+		icon = GFX_focus_OMO_slaves_mobilization
+		cost = 5
+		prerequisite = {
+			focus = OMO_real_reforms
+		}
+		prerequisite = {
+			focus = OMO_slave_based_economy
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_slaves_max_expansion
+			add_political_power = 20
+			hidden_effect = {
+				add_to_variable = {
+					var = slaves_amount_max
+					value = 5000
+				}
+			}
+		}
+		x = 20
+		y = 4
+
+	}
+	focus = {
+		id = OMO_kel_industry_entry
+		icon = GFX_focus_OMO_kel_industry_entry
+		cost = 5
+		prerequisite = {
+			focus = OMO_slaves_mobilization
+		}
+		x = 22
+		y = 5
+
+	}
+	focus = {
+		id = OMO_german_specialists
+		icon = GFX_focus_OMO_german_friends
+		cost = 5
+		prerequisite = {
+			focus = OMO_kel_industry_entry
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_omori_krupp
+			add_political_power = 50
+			add_opinion_modifier = {
+				target = GER
+				modifier = medium_increase
+			}
+		}
+		bypass = { GER = { NOT = { has_government = fascism } } }
+		x = 20
+		y = 6
+
+	}
+	focus = {
+		id = unknown25
+		icon = GFX_goal_unknown
+		cost = 0
+		prerequisite = {
+			focus = OMO_german_specialists
+		}
+		x = 20
+		y = 7
+
+	}
+	focus = {
+		id = OMO_steal_slaves
+		icon = GFX_focus_OMO_steal_slaves
+		cost = 5
+		prerequisite = {
+			focus = OMO_kel_industry_entry
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_steal_slave_open
+		}
+		bypass = { NOT = { country_exists = MEX } }
+		x = 24
+		y = 6
+
+	}
+	focus = {
+		id = unknown26
+		icon = GFX_goal_unknown
+		cost = 0
+		prerequisite = {
+			focus = OMO_steal_slaves
+		}
+		x = 24
+		y = 7
+
+	}
+	focus = {
+		id = unknown24
+		icon = GFX_goal_unknown
+		cost = 0
+		prerequisite = {
+			focus = unknown25
+		}
+		prerequisite = {
+			focus = unknown26
+		}
+		x = 22
+		y = 8
+
+	}
+	focus = {
+		id = OMO_kel_breakaway
+		icon = GFX_focus_OMO_kel_breakaway
+		cost = 5
+		prerequisite = {
+			focus = OMO_march_on_east
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_add_readiness
+			army_experience = 20
+			add_to_variable = { OMO_war_with_USA_readiness_var = 10 }
+		}
+		x = 32
+		y = 1
+
+	}
+	focus = {
+		id = OMO_kel_nevada_conquer
+		icon = GFX_focus_OMO_kel_nevada_conquer
+		cost = 10
+		prerequisite = {
+			focus = OMO_kel_breakaway
+		}
+		bypass = { NOT = { country_exists = NEV } }
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_add_readiness
+			add_to_variable = { OMO_war_with_USA_readiness_var = 10 }
+			declare_war_on = {
+                target = NEV
+				type = annex_everything
+			}
+		}
+		x = 30
+		y = 2
+
+	}
+	focus = {
+		id = OMO_kel_nevada_transformation
+		icon = GFX_focus_OMO_kel_nevada_transformation
+		cost = 10
+		prerequisite = {
+			focus = OMO_kel_nevada_conquer
+		}
+		available = {
+			has_war = no
+			owns_state = 379
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_add_readiness
+			add_to_variable = { OMO_war_with_USA_readiness_var = 10 }
+			custom_effect_tooltip = 1_OMO_slaves_max_expansion
+			add_state_core = 379
+			add_stability = 0.05
+			add_victory_points = {
+				province = 4816
+				value = 10
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = slaves_amount_max
+					value = 5000
+				}
+			}
+		}
+		x = 30
+		y = 3
+
+	}
+	focus = {
+		id = OMO_kel_naval
+		icon = GFX_focus_OMO_kel_naval
+		cost = 5
+		prerequisite = {
+			focus = OMO_kel_army_entry
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_burgerwehr_modify
+			navy_experience = 20
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			hidden_effect = { add_to_variable = { var_burgerwehr_navy = 0.1 } }
+		}
+		x = 12
+		y = 6
+
+	}
+	focus = {
+		id = OMO_doctrine_research
+		icon = GFX_focus_OMO_kel_expand_doctrines
+		cost = 5
+		prerequisite = {
+			focus = OMO_continue_training
+		}
+		completion_reward = {
+			army_experience = 10
+			add_ideas = OMO_idea_army_of_terror
+		}
+		x = 9
+		y = 7
+
+	}
+	focus = {
+		id = OMO_spaceboy_fleet
+		icon = GFX_focus_OMO_spaceboy_fleet
+		cost = 5
+		prerequisite = {
+			focus = OMO_kel_naval
+		}
+		completion_reward = {
+			add_naval_commander_role = {
+				Character = OMO_capt_spaceboy
+				traits = { war_hero fleet_protector superior_tactician destroyer_leader }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				maneuvering_skill = 5
+				coordination_skill = 4
+			}
+			navy_experience = 50
+		}
+		x = 12
+		y = 7
+
+	}
+	focus = {
+		id = OMO_kel_army_end
+		icon = GFX_focus_OMO_kel_army_end
+		cost = 5
+		prerequisite = {
+			focus = OMO_doctrine_research
+		}
+		prerequisite = {
+			focus = OMO_spaceboy_fleet
+		}
+		prerequisite = {
+			focus = OMO_kamikadze_sproutmole
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_burgerwehr_modify
+			army_experience = 50
+			navy_experience = 50
+			air_experience = 50
+			hidden_effect = { 
+			add_to_variable = { var_burgerwehr_navy = 0.2 }
+			add_to_variable = { var_burgerwehr_air = 0.2 }
+			add_to_variable = { var_burgerwehr = 0.07 }
+			}
+		}
+		x = 12
+		y = 8
+
+	}
+	focus = {
+		id = OMO_kel_expansion
+		icon = GFX_focus_OMO_kel_expansion
+		cost = 5
+		prerequisite = {
+			focus = OMO_basketball
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_pwvusa_tooltip
+			country_event = OMO_event.13
+		}
+		x = 17
+		y = 9
+
+	}
+	focus = {
+		id = OMO_kel_oregon_conquer
+		icon = GFX_focus_OMO_kel_oregon_conquer
+		cost = 10
+		prerequisite = {
+			focus = OMO_kel_breakaway
+		}
+		bypass = { NOT = { country_exists = ORE } }
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_add_readiness
+			add_to_variable = { OMO_war_with_USA_readiness_var = 10 }
+			declare_war_on = {
+				target = ORE
+				type = annex_everything
+			}
+		}
+		x = 34
+		y = 2
+
+	}
+	focus = {
+		id = OMO_kel_oregon_transformation
+		icon = GFX_focus_OMO_kel_oregon_transformation
+		cost = 10
+		prerequisite = {
+			focus = OMO_kel_oregon_conquer
+		}
+		available = {
+			has_war = no
+			owns_state = 385
+			owns_state = 386
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_add_readiness
+			add_to_variable = { OMO_war_with_USA_readiness_var = 10 }
+			custom_effect_tooltip = 1_OMO_slaves_max_expansion
+			add_state_core = 385
+			add_state_core = 386
+			add_stability = 0.05
+			set_province_name = { 
+				id = 7315
+				name = OMO_seattle_name
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = slaves_amount_max
+					value = 5000
+				}
+			}
+		}
+		x = 34
+		y = 3
+
+	}
+	focus = {
+		id = OMO_kel_war_USA
+		icon = GFX_focus_OMO_kel_war_USA
+		cost = 10
+		prerequisite = {
+			focus = OMO_kel_nevada_transformation
+		}
+		prerequisite = {
+			focus = OMO_kel_oregon_transformation
+		}
+		bypass = { USA = { exists = no } }
+		available = {
+			always = no
+		}
+		completion_reward = {
+			declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+			USA = {
+				country_event = OMO_event.10
+			}
+			if = {
+				limit = {
+					WBR = { exists = yes }
+				}
+				annex_country = { target = WBR }
+			}
+		}
+		x = 32
+		y = 4
+
+	}
+	focus = {
+		id = OMO_kel_USA_win
+		icon = GFX_focus_OMO_kel_USA_win
+		cost = 10
+		prerequisite = {
+			focus = OMO_kel_war_USA
+		}
+		available = {
+			has_war_with = USA
+			USA = { has_capitulated = yes }
+		}
+		completion_reward = {
+			custom_effect_tooltip = 1_OMO_slaves_max_expansion
+			hidden_effect = {
+				add_to_variable = {
+					var = slaves_amount_max
+					value = 10000
+				}
+			}
+		}
+		x = 32
+		y = 5
+
+	}
+	focus = {
+		id = OMO_form_burgerland
+		icon = GFX_focus_OMO_form_burgerland
+		cost = 10
+		prerequisite = {
+			focus = OMO_kel_USA_win
+		}
+		x = 32
+		y = 7
+
+	}
+}

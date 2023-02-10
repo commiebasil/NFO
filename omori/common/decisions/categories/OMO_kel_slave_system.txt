@@ -1,0 +1,19 @@
+OMO_kel_slave_system_decis = {
+	allowed = {
+		tag = OMO
+	}
+	
+	available = {
+		has_completed_focus = OMO_slave_based_economy
+	}
+	
+	visible = {
+		has_completed_focus = OMO_slave_based_economy
+	}
+	
+	visible_when_empty = yes
+	
+	scripted_gui = OMO_kel_slave_system_gui
+	
+	priority = 100
+}

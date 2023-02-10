@@ -1,0 +1,16 @@
+scripted_gui = {
+    OMO_political_struggle_gui = {
+        window_name = "OMO_political_struggle_container"
+        context_type = decision_category
+         
+        visible = {
+          tag = OMO  
+        }
+        
+        properties = {
+            OMO_political_struggle_text = {
+                frame = OMO_political_struggle_text
+            }
+        }
+    }
+}

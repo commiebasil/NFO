@@ -1,0 +1,51 @@
+﻿focus_tree = {
+	id = californian_focus
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CAL
+		}
+	}
+	
+	default = no
+	
+	focus = {
+		id = CAL_civil_war
+		icon = GFX_focus_OMO_provoke_conflict
+		x = 6
+		y = 0
+		cost = 5
+		cancelable = no
+		completion_reward = {
+			custom_effect_tooltip = 1_CAL_CW
+			OMO = {
+				transfer_state = 909
+				transfer_state = 911
+				transfer_state = 910
+				change_tag_from = ROOT
+				}
+			 declare_war_on = {
+				target = OMO
+				type = annex_everything
+				}
+			 hidden_effect = {
+					OMO = {
+						add_state_core = 378
+						add_state_core = 909
+						add_state_core = 910
+						add_state_core = 911
+						load_oob = OMO_1936 
+						add_ideas  = OMO_idea_chaos
+						add_equipment_to_stockpile = {
+							type = train_equipment_1
+							amount = 31
+							producer = USA
+						}
+						set_global_flag = superevent_california_civil_war
+					}
+				}
+		}
+	}
+}

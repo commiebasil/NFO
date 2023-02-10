@@ -1,0 +1,23 @@
+OMO_GAR_1 = {
+	name = "Omori Division" 
+	for_countries = { OMO } 
+	can_use = { always = yes } 
+	fallback_name = "%d Infantry Division" 
+	
+}
+
+OMO_CAV_01 = {
+	name = "National Omori Security" 
+	for_countries = { OMO } 
+	can_use = { always = yes } 
+	fallback_name = "%d National State Security" 
+	
+}
+
+OMO_ARM_01 = {
+	name = "Omori Armored Division" 
+	for_countries = { OMO } 
+	can_use = { always = yes } 
+	fallback_name = "%d Armored Division" 
+	
+}

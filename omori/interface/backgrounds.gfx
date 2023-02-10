@@ -1,0 +1,13 @@
+spriteTypes = {
+	frameAnimatedSpriteType = {
+			name = "GFX_mainmenu_background"
+			texturefile = "gfx/interface/mainmenu_background.dds"
+			noOfFrames = 2
+			loadType = "INGAME"
+			transparencecheck = no
+			animation_rate_fps = 1
+			looping = yes
+			play_on_show = yes
+			pause_on_loop = 0.0
+		}
+}

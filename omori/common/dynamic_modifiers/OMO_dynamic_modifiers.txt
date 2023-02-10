@@ -1,0 +1,29 @@
+OMO_idea_slaves = {
+	enable = { always = yes }
+	icon = GFX_idea_OMO_slaves
+	consumer_goods_factor = var_slaves_cg
+	conversion_cost_civ_to_mil_factor = var_slaves_cc
+	industry_free_repair_factor = var_slaves_if
+	production_speed_buildings_factor = var_slaves_ps
+	stability_factor = var_slaves_sf
+}
+
+OMO_idea_bonus_slaves = {
+	enable = { always = yes }
+	icon = GFX_idea_OMO_bonus_slaves
+	consumer_goods_factor = var_bonus_slaves_cg
+	conversion_cost_civ_to_mil_factor = var_bonus_slaves_cc
+	industry_free_repair_factor = var_bonus_slaves_if
+	production_speed_buildings_factor = var_bonus_slaves_ps
+}
+
+OMO_idea_burgerwehr = {
+	enable = { always = yes }
+	icon = GFX_idea_OMO_burgerwehr
+	army_attack_factor = var_burgerwehr
+	army_defence_factor = var_burgerwehr
+	army_speed_factor = var_burgerwehr
+	experience_gain_army = var_burgerwehr
+	air_superiority_efficiency = var_burgerwehr_air
+	naval_morale_factor = var_burgerwehr_navy
+}
